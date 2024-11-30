@@ -9,3 +9,35 @@ zbior_pusty = set()
 # przeciecie = zbior1 & zbior2
 # roznica = zbior1 - zbior2
 # roznica_symetryczna = zbior1 ^ zbior2
+
+# sprawdźmy ile osób chorowało w ostatnim roku na krzykach
+print(chorzy_rok & krzyki)
+
+# sprawdź ile osób z krzyków chorowało w ostatnim roku
+print(krzyki & chorzy_rok)
+
+# sprawdź ile osób chorowalo w ostatnim miesiacu w centrum
+print(centrum & chorzy_miesiac)
+
+# sprawdz ile osób mieszka w sumie w centrum i na krzykach
+print(centrum | krzyki)
+
+# pesele żeńskie mają ostatnią cyfrę parzystą, męskie - nieparzystą
+# zrób nowe zbiory dla kobiet i mężczyzn w NFZ
+
+pesele_meskie = set()
+pesele_zenskie = set()
+
+for pesel in NFZ:
+    if float(pesel) % 2 == 0:
+        pesele_zenskie.add(pesel)
+    if float(pesel) % 2 != 0:
+        pesele_meskie.add(pesel)
+
+
+print(pesele_zenskie)
+print(pesele_meskie)
+
+# usuwanie duplikatów
+lista = [1,2,3,1,2,3]
+print(list(set(lista)))
